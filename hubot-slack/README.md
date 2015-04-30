@@ -1,13 +1,18 @@
-Build Hubot Slack Images
-========================
-* `docker build -t hubot-slack .`
-* `docker build -t hubot-redis ../redis`
+# Captain (hubot)
 
-Create Containers
-=================
-* `docker create --name hubot-redis --restart=always hubot-redis`
-* `docker create --name hubot-slack --restart=always --link hubot-redis:redis -e HUBOT_SLACK_TOKEN=xxxx-1111-z1z1 -e REDIS_URL=redis://redis:6379 hubot-slack`
+## Install
 
-Start Hubot with Brain
-======================
-docker start hubot-redis hubot-slack
+1. Clone This Repo
+2. Create settings.env file:
+
+   ```
+   # Get/Create https://<org>.slack.com/services Hubot
+   HUBOT_SLACK_TOKEN=<token>
+   REDIS_URL=redis://redis:6379
+
+   # Auth Script Settings
+   # Find user id via: https://api.slack.com/methods/users.list/test
+   HUBOT_AUTH_ADMIN=U02D55C28
+   ```
+
+3. make up
