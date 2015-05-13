@@ -1,4 +1,5 @@
 FROM alpine:3.1
+MAINTAINER Kyle James Walker <KyleJamesWalker@gmail.com>
 
 RUN apk add --update libgcc wget go git gcc musl-dev && \
     GOPATH=/go go get gopkg.in/hashicorp/consul.v0 && \
