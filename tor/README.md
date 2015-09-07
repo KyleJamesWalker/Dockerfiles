@@ -1,5 +1,5 @@
-Docker Tor
-==========
+Docker Tor Client
+=================
 
 Starts a tor client with a SOCKS5 server accessible on port 9150.
 
